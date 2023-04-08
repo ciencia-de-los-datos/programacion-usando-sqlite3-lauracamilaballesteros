@@ -42,6 +42,7 @@
 --  >>> Escriba su codigo a partir de este punto <<<
 --
 
-SELECT strftime('%Y', c23) as YEAR, ROUND(AVG(c21),6) AS "avg(c21)"
+SELECT strftime('%Y', c23), AVG(c21) 
 FROM tbl2
-GROUP BY YEAR;
+GROUP BY strftime('%Y', c23);
+
